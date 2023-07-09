@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <ApplicationIcon>TomHines.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="TomHines.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Win32.Registry" Version="5.0.0" />
+    <PackageReference Include="System.Data.OleDb" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DbHelper">
+      <HintPath>..\DbHelper\bin\Release\net6.0-windows\DbHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="DB_OLEDB_XLSX">
+      <HintPath>..\DB_OLEDB_XLSX\bin\Release\net6.0-windows\DB_OLEDB_XLSX.dll</HintPath>
+    </Reference>
+    <Reference Include="IDbMaster">
+      <HintPath>..\IDbMaster\bin\Release\net6.0\IDbMaster.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
